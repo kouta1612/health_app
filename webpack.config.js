@@ -5,7 +5,6 @@ module.exports = {
     output: {
         filename: 'bundle.js',
         path: path.resolve(__dirname, 'dist'),
-        publicPath: '/dist/'
     },
     devtool: 'inline-source-map',
     module: {
@@ -17,5 +16,11 @@ module.exports = {
     },
     resolve: {
         extensions: ['.ts', '.js']
+    },
+    devServer: {
+        hot: true,
+        publicPath: '/dist/',
     }
 }
+
+console.log(module.exports)
